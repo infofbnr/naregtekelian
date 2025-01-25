@@ -76,16 +76,25 @@ ul li {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .gallery img {
-  width: 200px;
-  height: 200px;
+  width: 30%; /* 3 images per row on all screen sizes */
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
+
+/* Optional: Adjust for very small screens */
+@media (max-width: 480px) {
+  .gallery img {
+    width: 30%; /* Ensure 3 images per row even on small screens */
+  }
+}
+
 
 .gallery img:hover {
   transform: scale(1.05); /* Slight zoom on hover */
@@ -112,27 +121,6 @@ footer p a {
 }
 footer p a:hover {
   text-decoration: underline;
-}
-/* Gallery Styles */
-.gallery {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-.gallery img {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }
 
 /* Lightbox Styles */
