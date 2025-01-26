@@ -106,6 +106,21 @@ ul li {
     width: 30%; /* Ensure 3 images per row even on small screens */
   }
 }
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap if necessary */
+    padding: 0.5rem;
+    justify-content: center; /* Center-align the navbar links */
+  }
+
+  nav a {
+    flex: 1 1 auto; /* Adjust link widths to fit properly */
+    text-align: center; /* Center the text inside links */
+    padding: 0.5rem; /* Add padding for better spacing */
+  }
+}
 
 
 .gallery img:hover {
